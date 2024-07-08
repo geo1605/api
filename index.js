@@ -9,10 +9,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const db = mysql.createConnection({
-    host:'geoy12.mysql.pythonanywhere-services.com',
-    user:'geoy12',
-    password:'GAVAefEv14q@fa23',
-    database:'geoy12$control_escolar',
+    host:'dpg-cq60ohss1f4s73dqahg0-a.oregon-postgres.render.com',
+    user:'geo12',
+    password:'EiryhjzjWpVRKt3rsUcmPlKQXSobgLzg',
+    database:'control_escolar_3ak3',
 });
 
 app.post('/profesor/registrar', (req, res)=>{
