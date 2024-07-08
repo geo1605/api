@@ -9,9 +9,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const db = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
+    host:'geoy12.mysql.pythonanywhere-services.com',
+    user:'geoy12',
+    password:'GAVAefEv14q@fa23',
     database:'control_escolar',
 });
 
