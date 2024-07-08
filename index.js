@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const pool = new Pool({
-    host: 'postgresql://geo12:EiryhjzjWpVRKt3rsUcmPlKQXSobgLzg@dpg-cq60ohss1f4s73dqahg0-a.oregon-postgres.render.com/control_escolar_3ak3',
+    host: 'dpg-cq60ohss1f4s73dqahg0-a.oregon-postgres.render.com',
     user: 'geo12',
     password: 'EiryhjzjWpVRKt3rsUcmPlKQXSobgLzg',
     database: 'control_escolar_3ak3',
