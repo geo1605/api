@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const db = mysql.createConnection({
-    host:'dpg-cq60ohss1f4s73dqahg0-a',
+    host:'dpg-cq60ohss1f4s73dqahg0-a.oregon-postgres.render.com',
     user:'geo12',
     password:'EiryhjzjWpVRKt3rsUcmPlKQXSobgLzg',
     database:'control_escolar_3ak3',
