@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const pool = new Pool({
-    connectionString: 'postgresql://geo12:EiryhjzjWpVRKt3rsUcmPlKQXSobgLzg@dpg-cq60ohss1f4s73dqahg0-a.oregon-postgres.render.com/control_escolar_3ak3',
+    connectionString: 'dpg-cq60ohss1f4s73dqahg0-a.oregon-postgres.render.com/control_escolar_3ak3',
 });
 
 pool.connect((err) => {
