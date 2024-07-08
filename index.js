@@ -1,4 +1,3 @@
-
 const express = require('express');
 const { Pool } = require('pg');
 const bodyParser = require('body-parser');
@@ -10,16 +9,20 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const pool = new Pool({
-    host: 'dpg-cq60ohss1f4s73dqahg0-a.oregon-postgres.render.com',
-    user: 'geo12',
-    password: 'EiryhjzjWpVRKt3rsUcmPlKQXSobgLzg',
-    database: 'control_escolar_3ak3',
-    port: 5432,
+    connectionString: 'postgres://geo12:EiryhjzjWpVRKt3rsUcmPlKQXSobgLzg@dpg-cq60ohss1f4s73dqahg0-a.oregon-postgres.render.com/control_escolar_3ak3',
+});
+
+pool.connect((err) => {
+    if (err) {
+        console.error('Error connecting to the database:', err);
+        return;
+    }
+    console.log('Connected to the database.');
 });
 
 app.post('/profesor/registrar', async (req, res) => {
     const { id, nombre, correo, direccion } = req.body;
-    const sql = 'INSERT INTO profesores VALUES($1, $2, $3, $4)';
+    const sql = 'INSERT INTO profesores (id, nombre, correo, direccion) VALUES ($1, $2, $3, $4)';
     try {
         const result = await pool.query(sql, [id, nombre, correo, direccion]);
         res.status(200).send(result);
@@ -98,3 +101,4 @@ app.all('*', (req, res) => {
 app.listen(port, () => {
     console.log(`Escuchando en el puerto ${port}`);
 });
+
