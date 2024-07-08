@@ -12,7 +12,7 @@ const db = mysql.createConnection({
     host:'geoy12.mysql.pythonanywhere-services.com',
     user:'geoy12',
     password:'GAVAefEv14q@fa23',
-    database:'control_escolar',
+    database:'geoy12$control_escolar',
 });
 
 app.post('/profesor/registrar', (req, res)=>{
